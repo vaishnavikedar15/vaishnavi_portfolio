@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayuj's Portfolio</title>
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body{
+                background-color: bisque;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .section {
+            padding: 40px;
+            margin: 20px 0;
+        }
+
+        .about, .education, .projects, .contact {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .project-card {
+            display: inline-block;
+            margin: 15px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card .description {
+            padding: 15px;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+        }
+
+        .settings-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            padding: 20px;
+            z-index: 1050;
+        }
+
+        .settings-menu.open {
+            right: 0;
+        }
+
+        .close-settings-button {
+            position: absolute;
+            top: 20px;
+            right: 55px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 300px;
+            width: 100%;
+            object-position: center;
+        }
+
+        .profile-picture2 {
+            width: 50px;
+            height: 50px;
+        }
+
+        .card-body .btn {
+            margin-right: 10px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .profile-header .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-header img {
+            margin-right: 20px;
+        }
+
+        .settings-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2>About Me</h2>
+        <div class="profile-header">
+            <img src="pic.jpg" alt="Profile Picture" class="profile-picture">
+            <p>I am Vaishnavi Kedar, a third-year Computer Engineering student at MIT College of Engineering, Pune, with a strong passion for software development and technology. I specialize in full-stack development, with proficiency in front-end technologies like React and Angular, and back-end frameworks such as Node.js and Django. I am also well-versed in programming languages including JavaScript, Python, and Java.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <h2>Education</h2>
+        <table  border = "1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Examination</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10th Grade Marks</td>
+                    <td>95%</td>
+                </tr>
+                <tr>
+                    <td>12th Grade Marks</td>
+                    <td>89%</td>
+                </tr>
+                <tr>
+                    <td>MHT CET Score</td>
+                    <td>180/200</td>
+                </tr>
+                <tr>
+                    <td>Current CGPA</td>
+                    <td>9.1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="dep.jpg" alt="Project 1">
+            <div class="description">
+                <h3>Soul Ai</h3>
+                <p>Soul AI is a mental health and well-being bot designed to provide emotional support and mental wellness guidance to users. It leverages AI technology to help individuals navigate their mental health journey by offering personalized advice, coping strategies, and a listening ear. Whether you're feeling stressed, anxious, or just need someone to talk to, Soul AI .</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="burger.jpg" alt="Project 2">
+            <div class="description">
+                <h3>McDonald</h3>
+                <p>The McDonald's App is a convenient and user-friendly mobile application designed to enhance the customer experience by providing easy access to McDonald’s menu, exclusive deals, and various ordering options. With the app, users can browse the full menu, customize their orders, and choose from multiple order methods, including drive-thru, takeaway, and delivery.</p>
+            </div>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <ul class="contact-info">
+            <li>Email: vaishn@example.com</li>
+            <li>Phone: +9123 456 7890</li>
+        </ul>
+    </section>
+
+</body>
+</html>
